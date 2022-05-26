@@ -1,8 +1,11 @@
+import matplotlib as mpl
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 import scipy as sp
 from scipy.stats import linregress
+
+mpl.use('TkAgg')
 
 data = pd.read_csv('e7_1.csv', sep=';')
 
