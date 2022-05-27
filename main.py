@@ -13,18 +13,19 @@ data = pd.read_csv('e7_1.csv', sep=';')
 #y_data = data['U in V']
 #x_err = data['I error']
 #y_err = data['U error']
-x_data = data['Ohm']
-y_data = data['P in W']
-x_err = data['Ohm']*0.002
-y_err = data['P error']
+x_data = data['R in Ohm']
+y_data = data['P in mW']
+x_err = data['R error']
+y_err = data['P err in mW']
 
-#lin = linregress(x_data, y_data)
+#lin = linregress(x_data. y_data)
 #print(lin)
 
 plt.errorbar(x_data, y_data, y_err, x_err, fmt=',', linewidth=0.8, capsize=1.5)
-#plt.plot(x_data, lin.intercept + lin.slope*x_data)
+#plt.plot(x_data. lin.intercept + lin.slope*x_data)
 
-plt.xlabel(r'Strom $I$ in mA')
-plt.ylabel(r'Spannung $U$ in V')
+plt.grid()
+plt.xlabel(r'Widerstand $R$ in $\Omega$')
+plt.ylabel(r'Leistung $P$ in mW')
 
 plt.show()
