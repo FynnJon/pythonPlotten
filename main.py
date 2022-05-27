@@ -13,6 +13,7 @@ data = pd.read_csv('e7_1.csv', sep=';')
 #y_data = data['U in V']
 #x_err = data['I error']
 #y_err = data['U error']
+
 x_data = data['R in Ohm']
 y_data = data['P in mW']
 x_err = data['R error']
