@@ -29,16 +29,17 @@ y4 = x/(((x*(1-x))/0.05)+1)
 a = y3 > 0
 b = y4 > 0
 
-plt.plot(x, y1, color='red', linewidth=0.7)
+plt.plot(x, y1, color='red', linewidth=0.7, label=r'n=$\infty$')
 plt.errorbar(x_data, y1_data, y1_err, x_err, fmt=',', linewidth=0.7, capsize=2, color='red')
-plt.plot(x, y2, color='blue', linewidth=0.7)
+plt.plot(x, y2, color='blue', linewidth=0.7, label=r'n=5')
 plt.errorbar(x_data, y2_data, y2_err, x_err, fmt=',', linewidth=0.7, capsize=2, color='blue')
-plt.plot(x[a], y3[a], color='orange', linewidth=0.7)
+plt.plot(x[a], y3[a], color='orange', linewidth=0.7, label=r'n=0,5')
 plt.errorbar(x_data, y3_data, y3_err, x_err, fmt=',', linewidth=0.7, capsize=2, color='orange')
-plt.plot(x[b], y4[b], color='green', linewidth=0.7)
+plt.plot(x[b], y4[b], color='green', linewidth=0.7, label=r'n=0,05')
 plt.errorbar(x_data, y4_data, y4_err, x_err, fmt=',', linewidth=0.7, capsize=2, color='green')
 plt.axis([0, 1, 0, 1])
 plt.grid()
+plt.legend()
 plt.xlabel(r"$\frac{R_{AC}}{R_{AB}}$")
 plt.ylabel(r"$\frac{U_L}{U_0}$", rotation=0)
 
