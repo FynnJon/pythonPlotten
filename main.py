@@ -28,7 +28,7 @@ plt.plot(x, offset+A*np.exp(-l*x), label=r'$8.35e^{-0.84d}+0.35$')
 plt.grid()
 plt.axis([0, 5, 0, 10])
 plt.xlabel(r'Papierdicke $d$ in mm')
-plt.ylabel(r'Zählrate $Z$ in 1/s')
+plt.ylabel(r'Zählrate $Z$ in Bq')
 plt.legend()
 
 plt.show()
