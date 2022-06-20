@@ -23,7 +23,7 @@ plt.errorbar(x_data, y_data, y_err, x_err, fmt=',', linewidth=0.8, capsize=1.5)
 
 plt.grid()
 #plt.axis([0, 5, 0, 10])
-plt.xlabel(r'Abstand $d$ in cm')
+plt.xlabel(r'Abstand $r$ in cm')
 plt.ylabel(r'Zählrate $Z$ in Bq')
 plt.legend()
 
