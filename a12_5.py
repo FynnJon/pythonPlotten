@@ -9,9 +9,9 @@ mpl.use('TkAgg')
 
 data = pd.read_csv('a12_5.csv', sep=';')
 
-x_data = data['d in cm']
+x_data = data['1/r^2']
 y_data = data['rate_korr']
-x_err = data['d_err']
+x_err = data['r_k_err']
 y_err = data['rate_err']
 
 #lin = linregress(x_data, np.sqrt(1/y_data))
@@ -23,7 +23,7 @@ plt.errorbar(x_data, y_data, y_err, x_err, fmt=',', linewidth=0.8, capsize=1.5)
 
 plt.grid()
 #plt.axis([0, 5, 0, 10])
-plt.xlabel(r'Abstand $r$ in cm')
+plt.xlabel(r'Abstand $1/r^2$ in 1/cm$^2$')
 plt.ylabel(r'Zählrate $Z$ in Bq')
 plt.legend()
 
